@@ -1,0 +1,7 @@
+bin/
+obj/
+packages/
+logs/
+*.user
+.vs/
+TestResult.xml
