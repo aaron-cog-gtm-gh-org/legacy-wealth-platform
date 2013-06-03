@@ -1,0 +1,42 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="PV.Web.Site" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Viewer</title>
+    <link href="Styles/pv.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="pagewrap">
+        <div class="hdr">
+            <span class="hdrtitle">Portfolio Viewer</span>
+            <span class="hdruser">
+                <asp:Panel ID="pnlUser" runat="server">
+                    Logged in as: <asp:Label ID="lblUser" runat="server" />
+                    &nbsp;|&nbsp;
+                    <asp:LinkButton ID="lnkLogout" runat="server" OnClick="lnkLogout_Click" ForeColor="White">Log out</asp:LinkButton>
+                </asp:Panel>
+            </span>
+        </div>
+        <div class="navrow">
+            <asp:HyperLink ID="navClients" runat="server" NavigateUrl="~/ClientSearch.aspx">Client Search</asp:HyperLink>
+            <asp:PlaceHolder ID="phOps" runat="server">
+            &nbsp;|&nbsp;
+            <asp:HyperLink ID="navCheck" runat="server" NavigateUrl="~/PositionCheck.aspx">Position Check</asp:HyperLink>
+            &nbsp;|&nbsp;
+            <asp:HyperLink ID="navBrowser" runat="server" NavigateUrl="~/MessageBrowser.aspx">Message Browser</asp:HyperLink>
+            </asp:PlaceHolder>
+            <asp:PlaceHolder ID="phAdmin" runat="server">
+            &nbsp;|&nbsp;
+            <asp:HyperLink ID="navAdmin" runat="server" NavigateUrl="~/Admin.aspx">Admin</asp:HyperLink>
+            </asp:PlaceHolder>
+        </div>
+        <div class="content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        <div class="ftr">Portfolio Viewer v3.2.1 (build 2018.11) &nbsp;|&nbsp; Best viewed at 1024x768</div>
+    </div>
+    </form>
+</body>
+</html>

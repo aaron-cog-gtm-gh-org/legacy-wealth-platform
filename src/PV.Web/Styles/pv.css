@@ -1,0 +1,103 @@
+/* RJM 2013-04: site styles. Keep it plain, this is a back-office tool. */
+body {
+    margin: 0;
+    background: #E9E9E9;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 11px;
+    color: #000;
+}
+.pagewrap {
+    width: 1024px;
+    margin: 0 auto;
+}
+.hdr {
+    background: #1F3A5F;
+    color: #FFF;
+    padding: 6px 10px;
+}
+.hdrtitle {
+    font-weight: bold;
+    font-size: 16px;
+}
+.hdruser {
+    float: right;
+    font-size: 11px;
+}
+.navrow {
+    background: #D4D0C8;
+    padding: 4px 10px;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+}
+.navrow a {
+    color: #000;
+    text-decoration: none;
+}
+.navrow a:hover {
+    text-decoration: underline;
+}
+.content {
+    background: #FFF;
+    border: 1px solid #999;
+    padding: 10px;
+}
+.ftr {
+    text-align: center;
+    color: #666;
+    font-size: 10px;
+    padding: 8px 0;
+}
+table.grid {
+    border-collapse: collapse;
+    border: 1px solid #999;
+}
+table.grid th {
+    background: #D4D0C8;
+    font-weight: bold;
+    text-align: left;
+    border: 1px solid #999;
+    padding: 3px 6px;
+}
+table.grid td {
+    border: 1px solid #999;
+    padding: 3px 6px;
+    background: #FFF;
+}
+table.grid tr.alt td {
+    background: #F3F3F3;
+}
+td.num, th.num {
+    text-align: right;
+}
+input[type=text], select, textarea {
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 11px;
+    border: 1px inset #EEE;
+    padding: 1px 3px;
+}
+input[type=submit], input[type=button], button {
+    background: #D4D0C8;
+    border: 2px outset #EEE;
+    padding: 1px 8px;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 11px;
+}
+.msg {
+    margin: 8px 0;
+}
+.err {
+    color: #A00;
+}
+.detail th {
+    text-align: left;
+    padding-right: 15px;
+    font-weight: bold;
+}
+pre.rawmsg {
+    border: 1px solid #999;
+    background: #F8F8F8;
+    padding: 6px;
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    overflow: auto;
+}
