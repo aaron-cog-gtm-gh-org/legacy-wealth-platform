@@ -44,9 +44,9 @@ folder at the repo root. appSettings "ArchiveRoot" in web.config.
 
 LOGINS
 ------
-Ask Support (ext. 4417) for an account - access is role based
-(ADVISER / OPS / ADMIN). Position Check, Message Browser and Admin are not
-visible to advisers.
+Users are signed on automatically as the DefaultUser in web.config - access
+is role based (ADVISER / OPS / ADMIN). Position Check, Message Browser and
+Admin are not visible to advisers.
 
 
 PROJECTS

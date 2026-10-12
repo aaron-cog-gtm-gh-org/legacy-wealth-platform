@@ -38,15 +38,14 @@ namespace PV.Web
                 r["OPENED"] = r["OPEN_DT"] == DBNull.Value ? "" : DateUtil.FormatDate((DateTime)r["OPEN_DT"]);
                 r["CLOSED"] = r["CLOSE_DT"] == DBNull.Value ? "" : DateUtil.FormatDate((DateTime)r["CLOSE_DT"]);
 
-                Mt535Statement st = PositionBuilder.GetLatest(r["SAFE_CODE"].ToString());
-                if (st != null)
+                PortfolioTotals.Snapshot s = PortfolioTotals.ForSafeCodes(
+                    r["SAFE_CODE"].ToString());
+                if (s.HasData)
                 {
-                    r["STMT_DATE"] = DateUtil.FormatDate(st.StatementDate);
-                    r["STMT_RAW"] = st.StatementDate;
-                    decimal mv = 0m;
-                    foreach (Mt535Line l in st.Lines) mv += l.MktValGbp;
-                    r["MKTVAL"] = WebUtil.FmtMoney(mv);
-                    total += mv;
+                    r["STMT_DATE"] = DateUtil.FormatDate(s.StmtDate.Value);
+                    r["STMT_RAW"] = s.StmtDate.Value;
+                    r["MKTVAL"] = WebUtil.FmtMoney(s.MktValGbp);
+                    total += s.MktValGbp;
                     any = true;
                 }
                 else

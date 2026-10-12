@@ -1,6 +1,4 @@
 using System;
-using System.Web.Security;
-
 namespace PV.Web
 {
     public partial class Site : System.Web.UI.MasterPage
@@ -20,11 +18,5 @@ namespace PV.Web
             phAdmin.Visible = role == "ADMIN";
         }
 
-        protected void lnkLogout_Click(object sender, EventArgs e)
-        {
-            FormsAuthentication.SignOut();
-            Session.Abandon();
-            Response.Redirect("Login.aspx");
-        }
     }
 }

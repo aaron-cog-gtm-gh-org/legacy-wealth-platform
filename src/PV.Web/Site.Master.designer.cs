@@ -6,7 +6,7 @@ namespace PV.Web
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         protected global::System.Web.UI.WebControls.Panel pnlUser;
         protected global::System.Web.UI.WebControls.Label lblUser;
-        protected global::System.Web.UI.WebControls.LinkButton lnkLogout;
+        
         protected global::System.Web.UI.WebControls.HyperLink navClients;
         protected global::System.Web.UI.WebControls.PlaceHolder phOps;
         protected global::System.Web.UI.WebControls.PlaceHolder phAdmin;

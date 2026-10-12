@@ -14,8 +14,6 @@
             <span class="hdruser">
                 <asp:Panel ID="pnlUser" runat="server">
                     Logged in as: <asp:Label ID="lblUser" runat="server" />
-                    &nbsp;|&nbsp;
-                    <asp:LinkButton ID="lnkLogout" runat="server" OnClick="lnkLogout_Click" ForeColor="White">Log out</asp:LinkButton>
                 </asp:Panel>
             </span>
         </div>
